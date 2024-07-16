@@ -22,7 +22,7 @@ router.get("/users", auth, adminCheck, listUsers);
 //@Endpoint http://localhost:5000/api/users
 //@Method  GET
 //@Access  Private
-router.get("/users", auth, teacherCheck, listUsers);
+router.get("/usersteacher", auth, teacherCheck, listUsers);
 
 //@Endpoint http://localhost:5000/api/users/:id
 //@Method  GET
@@ -44,9 +44,19 @@ router.delete("/users/:id", removeUsers);
 //@Access  Private
 router.post("/change-status", auth, adminCheck, changeStatus);
 
+//@Endpoint http://localhost:5000/api/change-status
+//@Method  POST
+//@Access  Private
+router.post("/change-status", auth, teacherCheck, changeStatus);
+
 //@Endpoint http://localhost:5000/api/change-role
 //@Method  POST
 //@Access  Private
 router.post("/change-role", auth, adminCheck, changeRole);
+
+//@Endpoint http://localhost:5000/api/change-role
+//@Method  POST
+//@Access  Private
+router.post("/change-role", auth, teacherCheck, changeRole);
 
 module.exports = router;

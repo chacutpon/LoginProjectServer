@@ -102,7 +102,7 @@ exports.deleteUser = async (req, res) => {
 
 exports.createAndUpdateUser = async(req,res)=>{
   // const roitai = 'hello controller'
-  // const A = 'ฝากกดติดตามด้วยนะครับ'
+  // const A = ''
   //   const obj = {
   //       name:'tam',
   //       location:[103.24,13.754]
